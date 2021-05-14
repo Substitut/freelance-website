@@ -63,10 +63,6 @@ nav {
   width: auto;
 }
 
-.mobile-menu, .logo {
-  margin-top: -9px;
-}
-
 .mobile-menu-open {
   @extend .row;
   @extend .justify-content-sb;
@@ -77,6 +73,10 @@ nav {
   background: white;
   color: #444444;
   padding: 1.5em;
+
+  .mobile-menu, .logo {
+    margin-top: -5px;
+  }
 
   .item-container {
     margin-bottom: 1.5em;

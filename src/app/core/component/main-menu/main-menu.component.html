@@ -22,7 +22,7 @@
 </nav>
 
 <div *ngIf="isMobile && selectedMenu && menuOpen" class="mobile-menu-open">
-  <img class="logo" src="assets/images/logo.png" alt="logo">
+  <img class="logo" src="assets/images/logo_dark.png" alt="logo">
   <div class="column align-items-center">
     <div *ngFor="let item of menu; let i = index" class="item-container">
       <div class="menu" [ngClass]="{'selected' : isMenuSelected(item.url)}"
