@@ -1,0 +1,98 @@
+@import "src/styles";
+
+:host {
+  font-family: $niramit;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav {
+  @extend .row;
+  @extend .align-items-center;
+  overflow: hidden;
+
+  .item-container {
+    @extend .row;
+    @extend .align-items-center;
+    height: 80px;
+  }
+
+  .menu {
+    @extend .row;
+    @extend .align-items-center;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+
+
+    .selected-block {
+      background: $naturalyellow;
+      height: 4px;
+      width: 100%;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .bullet {
+    margin: 0 1em;
+    color: white;
+  }
+
+  .selected {
+    color: $naturalyellow;
+  }
+}
+
+.mobile-menu {
+  margin-left: 2em;
+  height: 48px;
+  width: 48px;
+
+  .mat-icon {
+    @include md-icon-size(48px);
+  }
+}
+
+.logo {
+  margin-right: 2em;
+  height: 48px;
+  width: auto;
+}
+
+.mobile-menu, .logo {
+  margin-top: -9px;
+}
+
+.mobile-menu-open {
+  @extend .row;
+  @extend .justify-content-sb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  color: #444444;
+  padding: 1.5em;
+
+  .item-container {
+    margin-bottom: 1.5em;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .menu {
+    outline: none;
+    cursor: pointer;
+    padding-bottom: 0.25em;
+  }
+
+  .selected {
+    border-bottom: solid 2px $naturalyellow;
+  }
+}

@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%; // Use to have easier rem calculation.
+  font-family: $koho;
+  background: linear-gradient(to right, $darkgreen, $lightgreen);
+  color: white;
+}
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $niramit;
+  letter-spacing: 1px;
+}

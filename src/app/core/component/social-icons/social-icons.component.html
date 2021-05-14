@@ -1,0 +1,5 @@
+<div class="row align-items-center">
+  <a *ngFor="let account of socialAccounts" target="_blank" [href]="account.url">
+    <img alt="{{account.name}}" src="{{account.icon}}">
+  </a>
+</div>

@@ -1,0 +1,24 @@
+@import "src/styles";
+
+header {
+  @extend .row;
+  @extend .align-items-center;
+  @extend .justify-content-sb;
+  @extend .wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 0 1.5em;
+
+  .logo {
+    margin-right: 2em;
+    height: 48px;
+    width: auto;
+  }
+
+  app-main-menu {
+    flex: 1;
+  }
+}

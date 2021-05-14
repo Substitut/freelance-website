@@ -1,0 +1,12 @@
+img {
+  height: 32px;
+  width: auto;
+
+}
+
+a {
+  margin-right: 0.5em;
+  &:last-child {
+    margin-right: 0;
+  }
+}

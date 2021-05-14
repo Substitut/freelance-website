@@ -1,0 +1,37 @@
+<nav *ngIf="!isMobile">
+  <div *ngFor="let item of menu; let i = index" class="item-container">
+    <div class="menu" [ngClass]="{'selected' : isMenuSelected(item.url)}"
+         [routerLink]="item.url">
+      <div *ngIf="isMenuSelected(item.url)" class="selected-block"></div>
+      <p>{{item.name}}</p>
+    </div>
+    <div *ngIf="i < menu.length - 1" class="bullet">•</div>
+  </div>
+</nav>
+
+<nav *ngIf="isMobile && selectedMenu">
+  <div class="item-container margin-hor-centered">
+    <div class="menu">
+      <div class="selected-block"></div>
+      <p>{{selectedMenu.name}}</p>
+    </div>
+  </div>
+  <button mat-icon-button type="button" aria-label="Menu" class="mobile-menu" (click)="menuOpen = !menuOpen">
+    <mat-icon>menu</mat-icon>
+  </button>
+</nav>
+
+<div *ngIf="isMobile && selectedMenu && menuOpen" class="mobile-menu-open">
+  <img class="logo" src="assets/images/logo.png" alt="logo">
+  <div class="column align-items-center">
+    <div *ngFor="let item of menu; let i = index" class="item-container">
+      <div class="menu" [ngClass]="{'selected' : isMenuSelected(item.url)}"
+           [routerLink]="item.url">
+        <p>{{item.name}}</p>
+      </div>
+    </div>
+  </div>
+  <button mat-icon-button type="button" aria-label="Menu" class="mobile-menu" (click)="menuOpen = !menuOpen">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
